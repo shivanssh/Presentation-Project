@@ -4,7 +4,10 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import BasicDetailPanels from './dataGridExpand';
+import BasicDetailPanels from './dataGridNorthStar';
+import BasicDetailPanelsFirstTime from './dataGridFirstTime';
+import BasicDetailPanelsBeTheBest from './dataGridBeTheBest';
+import BasicDetailPanelsTrueGlobal from './dataGridTrueGlobal';
 
 export default function BasicAccordion() {
   return (
@@ -15,7 +18,7 @@ export default function BasicAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Objective 1</Typography>
+          <Typography>Objective : North Star</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -29,12 +32,11 @@ export default function BasicAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Objective 2</Typography>
+          <Typography>Objective : First Time Right</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            <BasicDetailPanelsFirstTime />
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -44,8 +46,27 @@ export default function BasicAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Objective 3</Typography>
+          <Typography>Objective:BeThe Best</Typography>
         </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <BasicDetailPanelsBeTheBest />
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
+          <Typography>Objective:True Global</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <BasicDetailPanelsTrueGlobal />
+          </Typography>
+        </AccordionDetails>
       </Accordion>
     </div>
   );

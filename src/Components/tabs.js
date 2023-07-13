@@ -1,9 +1,16 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
 
 function CustomTabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -34,7 +41,7 @@ CustomTabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `simple-tab-${index}`,
-    'aria-controls': `simple-tabpanel-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
   };
 }
 
@@ -45,23 +52,55 @@ export default function BasicTabs() {
     setValue(newValue);
   };
 
+  const tableView = (
+    <TableContainer component={Paper}>
+      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <TableHead>
+          <TableRow>
+            <TableCell>Sr No.</TableCell>
+            <TableCell>Title</TableCell>
+            <TableCell>Remark</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {[...Array(2)].map((item, idx) => {
+            return (
+              <TableRow
+                key={idx}
+                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+              >
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+                <TableCell></TableCell>
+              </TableRow>
+            );
+          })}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+
   return (
-    <Box sx={{ width: '100%' }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
           <Tab label="Actions (3/4)" {...a11yProps(0)} />
           <Tab label="Lead Indicators" {...a11yProps(1)} />
           <Tab label="Impediments (1/2)" {...a11yProps(2)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
-        Actions (3/4)
+        {tableView}
       </CustomTabPanel>
       <CustomTabPanel value={value} index={1}>
-        Lead Indicators
+        {tableView}
       </CustomTabPanel>
       <CustomTabPanel value={value} index={2}>
-        Impediments (1/2)
+        {tableView}
       </CustomTabPanel>
     </Box>
   );

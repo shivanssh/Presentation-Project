@@ -18,7 +18,7 @@ export default function BasicAccordion() {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Objective : North Star</Typography>
+          <Typography style={{fontWeight:700}}>Objective : North Star</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -32,7 +32,7 @@ export default function BasicAccordion() {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Objective : First Time Right</Typography>
+          <Typography style={{fontWeight:700}}>Objective : First Time Right</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -46,7 +46,7 @@ export default function BasicAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Objective:BeThe Best</Typography>
+          <Typography style={{fontWeight:700}}>Objective : BeThe Best</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -60,7 +60,7 @@ export default function BasicAccordion() {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography>Objective:True Global</Typography>
+          <Typography style={{fontWeight:700}}>Objective : True Global</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>

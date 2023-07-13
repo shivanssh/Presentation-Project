@@ -41,7 +41,7 @@ function DetailPanelContent({ row: rowProp }) {
 }
 
 const columns = [
-  { field: 'id', headerName: 'KPI', width:600, fontWeight: 500 },
+  { field: 'id', headerName: 'KPI', width:600 },
 ];
 
 function generateProducts() {

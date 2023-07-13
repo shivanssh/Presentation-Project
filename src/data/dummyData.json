@@ -1,0 +1,21 @@
+[
+  {
+    "key": "PId1",
+    "title": "Objective : North Star",
+    "child": {
+      "title": "KPI: Revenue Growth ($Mn)",
+      "key": "CId1",
+      "subChild": {
+        "title": "Account 1"
+      }
+    }
+  },
+  {
+    "key": "PId2",
+    "title": "Objective:BeThe Best"
+  },
+  {
+    "key": "PId3",
+    "title": "Objective:True Global"
+  }
+]
